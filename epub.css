@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page a:focus {
+    outline: 0;
+}
+
+#player {
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+}
+
+#player .iframe {
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    z-index: 1;
+}
+#player .iframe iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+
+}
+
+#player .pages {
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 100;
+}
+
+.pagestrigger {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.pagestrigger .trigger {
+    position: absolute;
+    left: 0; top: 0;
+    width: 32px;
+    height: 32px;
+    /*border-left: 4px solid #AAA;*/
+    /*border-top: 4px solid #AAA;*/
+    cursor: pointer;
+}
+
+.pagestrigger .trigger.mouseover {
+    background-image: url(images/pages.png);
+}
+
+.prevpage {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 100;
+}
+
+.prevpage .trigger {
+    position: relative;
+    top: -32px;
+    width: 128px;
+    height: 64px;
+    /*border-left: 4px solid #AAA;*/
+    cursor: pointer;
+}
+
+.prevpage .trigger.mouseover {
+    background-image: url(images/leftarrow.png);
+}
+
+.nextpage {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 100;
+}
+
+.nextpage .trigger {
+    position: relative;
+    top: -32px;
+    width: 128px;
+    height: 64px;
+    /*border-right: 4px solid #AAA;*/
+    cursor: pointer;
+}
+
+.nextpage .trigger.mouseover {
+    background-image: url(images/rightarrow.png);
+}
+
+
+.librarytrigger {
+    position: absolute;
+    left: 0; bottom: 0; right: 0;
+    z-index: 201;
+}
+
+.librarytrigger .trigger {
+    position: absolute;
+    left: 0; bottom: 0; right: 0;
+    height: 32px;
+    /*border-bottom: 4px solid #AAA;*/
+    cursor: pointer;
+}
+
+.library {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 200px;
+    z-index: 202;
+    display: none;
+    overflow: auto;
+    background: #AAA;
+}
+
+.library .contents {
+    padding: 20px;
+}
+
+.library .bookcover {
+    float: left;
+    position: relative;
+    width: 105px;
+    height: 148px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-family: serif;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.library .bookcover span.title {
+    padding: 5px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.library .bookcover img {
+    width: 105px;
+}
+
+.library .bookcover div.links {
+    text-align: center;
+    position: absolute; 
+    left: 0;
+    bottom: 15%;
+    width: 100%;
+    display: none;
+}
+
+.library .bookcover:hover div.links {
+    display: block;
+}
+
+.library .bookcover div.links a {
+    color: black;
+    text-transform: uppercase;
+    font-size: smaller;
+    text-decoration: none;
+    padding: 2px;
+    background: white;
+    color: black;
+    border: 3px solid black;
+}
+
+.library .bookcover div.links a:hover {
+    color: black;
+    text-transform: uppercase;
+    background: black;
+    border: 3px solid black;
+    color: white;
+}
+
+.page {
+    position: absolute;
+    width: 105px;
+    min-height: 148px;
+    font-size: 12px;
+    font-family: serif;
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.page a {
+    padding: 5px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.page img.cover {
+    width: 105px;
+}
+
+.page.active {
+    background: black;
+    color: white;
+    z-index: 1001 !important;
+}
+
+.page.active a {
+    color: white;
+}
+
+.page.mouseover {
+    z-index: 1002 !important;
+}
+
+.page.cover a {
+    display: none;
+}
+
+#player .bookmark {
+    position: absolute;
+    right: 0; top: 0;
+    width: 48px;
+    height: 48px;
+    z-index: 20;
+    cursor: pointer;
+    /*border-top: 4px solid #AAA;*/
+    /*border-right: 4px solid #AAA;*/
+}
+
+#player .bookmark.folded {
+    background-image: url(images/dogear.png);
+}
