@@ -246,3 +246,7 @@ body {
 #player .bookmark.folded {
     background-image: url(images/dogear.png);
 }
+
+form#bookmaker {
+    display: none;
+}

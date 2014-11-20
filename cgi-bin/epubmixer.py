@@ -6,7 +6,7 @@ from shutil import copytree, rmtree
 from uuid import uuid1
 
 
-EPUB3_TEMPLATE_PATH = "epub3_template"
+EPUB3_TEMPLATE_PATH = "cgi-bin/epub3_template"
 
 NS = {}
 NS['opf'] = "http://www.idpf.org/2007/opf"
@@ -240,18 +240,6 @@ def mixbooks (playlist, src_path, output_path = "bookmarks.epub"):
     mixepub.write_to_path()
     mixepub.zip()
     rmtree(mixepub.path)
-
-
-        # print (item.attrib.get("id"), item.attrib.get("href"))
-        # filename = os.path.join(tmpdir, href_for(item))
-        # os.makedirs(filename)
-        # manifest_item = epub.opf.ManifestItem(
-        #     identifier=id_for(item),
-        #     href=href_for(item),
-        #     media_type=item.media_type)
-        # out.add_item(filename, manifest_item)
-
-    # out.close()
 
 
 if __name__ == "__main__":

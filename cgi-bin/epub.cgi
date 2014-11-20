@@ -193,6 +193,9 @@ else:
 </head>
 <body>
 <div id="player"></div>
+<form method="post" id="bookmaker" action="/cgi-bin/epubmixer.cgi">
+    <textarea class="playlist" name="p"></textarea>
+</form>
 </body>
 <script src="/lib/jquery.min.js"></script>
 <script src="/lib/d3.min.js"></script>

@@ -307,10 +307,17 @@ function init_library (data) {
         .on("click", function (d) {
             if (d === bookmarksbook) {
                 d3.event.preventDefault();
-                alert("THIS FEATURE IS COMING SOON!\n"+d.pages
-                        .filter(function (d) { return d.src !== undefined; })
-                        .map(function (d) { return d.book.path + "?href=" + d.src })
-                        .join("\n"));
+                var playlist = d.pages
+                    .filter(function (d) { return d.src !== undefined; })
+                    .map(function (d) { return d.book.path + "?href=" + d.src })
+                    .join("\n"),
+                    form = d3.select("form#bookmaker");
+                form.select(".playlist").text(playlist);
+                form[0][0].submit();
+                // alert(playlist);
+                // url = "/cgi-bin/epubmixer.cgi?p=" + encodeURIComponent(playlist);
+                // TODO: POST, target (separate window)
+                // window.location = url;
             }
         });
     // add cover if present        
